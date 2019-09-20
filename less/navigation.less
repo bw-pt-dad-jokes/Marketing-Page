@@ -1,0 +1,35 @@
+//navigation styles go here
+.displayFlex(@justify, @align, @width , @margin){
+  display:flex;
+  justify-content: @justify;
+  align-items: @align;
+  width: @width;
+  margin: @margin;
+}
+.border(@border, @border-rad){
+  border: @border;
+  border-radius: @border-rad;
+}
+@bordercolor: orange;
+//come up also with a color for @bordercolor just incase the guys used an actual hexcode
+header{
+  .border(2px solid @bordercolor; 10px);
+  .displayFlex(center; center; 90%; 0 5%;);
+  .mark-nav{
+    .displayFlex(center; center; 90%; 0 5%;);
+    //border: 1px solid blue;
+    h1{
+    //  border: 1px solid green;
+      padding: 10px;
+      font-family: 'Amatic SC', cursive;
+    }
+    a{
+      font-size: 1.8rem;
+      text-decoration: none;
+      color:lightslategray;
+      //border: 1px solid yellow;
+      padding: 10 20;
+    }
+  }
+
+}
