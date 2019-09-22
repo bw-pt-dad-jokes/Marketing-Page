@@ -1,3 +1,9 @@
+/*I just use the following mixin so I can see borders whenever I'm working on things
+as such it's commented out because I'm not really using
+.seenBorder{
+  border: 2px solid lightslategray;
+}
+*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -126,6 +132,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* This is added in here specifically for responsive font sizes */
+html {
+  font-size: 62.5%;
+}
 * {
   box-sizing: border-box;
 }
@@ -177,22 +187,33 @@ header {
   width: 90%;
   margin: 0 5%;
 }
-header .mark-nav {
+header nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin: 0 5%;
+  width: 100%;
+  margin: 10px;
 }
-header .mark-nav h1 {
-  padding: 10px;
+header nav h1 {
   font-family: 'Amatic SC', cursive;
+  width: 60%;
+  text-align: right;
+  padding-right: 20px;
 }
-header .mark-nav a {
+header nav .a-tags {
+  width: 40%;
+  text-align: right;
+}
+header nav .a-tags a {
   font-size: 1.8rem;
   text-decoration: none;
   color: lightslategray;
-  padding: 10 20;
+  padding: 20px 5px;
+  border-left: 2px solid orange;
+}
+img {
+  width: 100px;
+  height: 100px;
 }
 @font-face {
   font-family: 'Amatic SC';
