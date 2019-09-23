@@ -1,9 +1,8 @@
 /*I just use the following mixin so I can see borders whenever I'm working on things
-as such it's commented out because I'm not really using
-.seenBorder{
+as such it's commented out because I'm not really using*/
+.seenBorder {
   border: 2px solid lightslategray;
 }
-*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -210,6 +209,30 @@ header nav .a-tags a {
   color: lightslategray;
   padding: 20px 5px;
   border-left: 2px solid orange;
+}
+@media (max-width: 880px) {
+  header {
+    background: pink;
+    border: 2px solid lightslategray;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    background: red;
+  }
+}
+footer {
+  border: 2px solid orange;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 5%;
+}
+footer copyright {
+  padding: 20px 5px;
+  font-size: 1.5rem;
 }
 img {
   width: 100px;

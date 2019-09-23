@@ -1,26 +1,42 @@
-//navigation styles go here
+//navigation styles for desktop go here
 
-header{
+header {
   .border(2px solid @bordercolor; 10px);
   .displayFlex(center; center; 90%; 0 5%;);
-    nav{
-      .displayFlex(space-between; center; 100%; 10px;);
-      h1{
-        font-family: 'Amatic SC', cursive;
-        width: 60%;
-        text-align: right;
-        padding-right: 20px;
-      }
-      .a-tags{
-        width:40%;
-        text-align: right;
-        a{
-          font-size: 1.8rem;
-          text-decoration: none;
-          color:lightslategray;
-          padding: 20px 5px;
-          border-left: 2px solid orange;
-        }
+  nav {
+    .displayFlex(space-between; center; 100%; 10px;);
+    h1 {
+      font-family: 'Amatic SC', cursive;
+      width: 60%;
+      text-align: right;
+      padding-right: 20px;
+    }
+    .a-tags {
+      width: 40%;
+      text-align: right;
+      a {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: lightslategray;
+        padding: 20px 5px;
+        border-left: 2px solid orange;
       }
     }
   }
+}
+//though I did everything desktop first, the code does read as mobile first but
+//only because that's what the mvp requires of us.
+//nav styling for tablet
+@media @tablet {
+  header {
+    background: pink;
+    .seenBorder;
+  }
+}
+//nav styling for mobile
+@media @mobile {
+  header{
+    background: red;
+  }
+
+}
