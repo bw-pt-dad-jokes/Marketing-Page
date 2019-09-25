@@ -213,13 +213,15 @@ body {
 body .main-section .homepage-block {
   width: 90%;
   margin: 0 auto;
-  background-color: #C4C4C4;
+  background-color: #bcbac6;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  border: 2px solid #bcbac6;
+  border-radius: 25px;
 }
 body .main-section .homepage-block .text-block-homepage {
   display: flex;

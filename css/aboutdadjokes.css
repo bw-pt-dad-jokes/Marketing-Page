@@ -221,6 +221,8 @@ body .topSection .largeBlock {
   text-align: center;
   background-color: #bcbac6;
   margin: 0 auto;
+  border: 2px solid #bcbac6;
+  border-radius: 25px;
 }
 body .topSection .largeBlock h2 {
   font-size: 2.75rem;
@@ -241,12 +243,15 @@ body .bottomSection {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 body .bottomSection .smallBlock {
   width: 45%;
   height: 500px;
   background-color: #bcbac6;
   text-align: center;
+  border: 2px solid #bcbac6;
+  border-radius: 25px;
 }
 body .bottomSection .smallBlock h2 {
   font-size: 2.75rem;
