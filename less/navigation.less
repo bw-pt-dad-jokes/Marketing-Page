@@ -3,8 +3,9 @@
   border: 2px solid lightslategray;
 }
 header {
-  .border(2px solid @bordercolor; 10px);
-  .displayFlex(center; center; 90%; 0 5%;);
+  .border(2px solid @orange; 10px);
+  background: @orange;
+  .displayFlex(center; center; 90%; 10px 5%;);
   nav {
     .displayFlex(space-between; center; 100%; 10px;);
     h1 {
@@ -15,13 +16,14 @@ header {
     }
     .a-tags {
       width: 40%;
-      text-align: right;
+      text-align: center;
       a {
         font-size: 1.8rem;
+        font-family: sans-serif;
         text-decoration: none;
-        color: lightslategray;
-        padding: 20px 5px;
-        border-left: 2px solid orange;
+        color: white;
+        padding: 22px 5px;
+        border-left: 2px solid white;
       }
     }
   }
@@ -30,15 +32,43 @@ header {
 //only because that's what the mvp requires of us.
 //nav styling for tablet
 @media @tablet {
-  header {
-    background: pink;
-    .seenBorder;
+ header {
+    border: 2px solid white;
+    border-radius: 0px;
+    background: white;
+    .displayFlex(center; center; 98%; 10px 1%;);
+    flex-direction: column;
+    .mark-nav{
+      flex-direction: column;
+      margin: 0;
+      h1{
+        padding: 5px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        border: none;
+        .border(2px solid @orange; 5px;);
+        background: @orange;
+      }
+      .a-tags{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        a{
+          padding: 0;
+          padding: 15px 5px;
+          border: none;
+          .border(2px solid @orange; 5px;);
+          border-top: 2px solid @wild-sand;
+          color: white;
+          background: @orange;
+        }
+      }
+    }
   }
 }
+
 //nav styling for mobile
 @media @mobile {
-  header{
-    background: red;
-  }
-
+//everything for the @tablet size above still fits
 }

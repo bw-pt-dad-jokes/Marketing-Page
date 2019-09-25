@@ -1,17 +1,132 @@
 //styling for the body of the about Page
+
 .about-content{
-  .displayFlex(center; center; 90%; 20px 5%;);
+  .displayFlex(center; center; 90%; 10px 5%;);
+  //.seenBorder;
   flex-direction: column;
   section{
-    .seenBorder;
+    .border(2px solid @french-gray; 10px;);
+    background: @french-gray;
     margin-bottom: 15px;
-  }
-  .person1{
-    //might have to try display inline block on this part. test that out tomorrow since i'm very tired nowwww.
-    .seenBorder;
-    img{
-      width: 25%;
-      height: auto;
+    .displayFlex(center; left; 100%; 10px 0;);
+    flex-direction: column;
+    h2{
+      font-family: 'Big Shoulders Display', cursive;
+      text-align: center;
     }
   }
+  //taking away the border around all sections to just put it on the divs here
+  .person1, .person2, .person3, .person4, .person5{
+    flex-direction: row;
+    background: none;
+    border: none;
+    .displayFlex(space-between; center; 100%; 10px 0;);
+    div{
+      .border(2px solid @french-gray; 10px;);
+      background: @french-gray;
+      width: 75%;
+      padding: 15px 10px;
+      height: 200px;
+      margin: 15px;
+      &:hover{
+        background: @wild-sand;
+        .border(2px solid @french-gray; 10px);
+      }
+      h2{
+        //font-size: 1.9rem;
+        color: @black-pearl;
+      }
+      p{
+      //  font-size: 1.3rem;
+      color: @black-pearl;
+      }
+    }
+    img{
+      border-radius: 10px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .person1, .person3, .person5{
+    div{
+      margin-right: 0px;
+      h2{
+        text-align: left;
+      }
+    }
+  }
+  .person2, .person4{
+    div{
+      margin-left:0px;
+      h2{
+        text-align: right;
+
+      }
+    }
+  }
+}
+
+//styling for tablet mode
+@media @tablet{
+  .about-content{
+    .person1, .person2, .person3, .person4, .person5{
+
+      div{
+        width: 100%;
+        margin: 0;
+        h2{
+          text-align: left;
+        }
+      }
+        img{
+        display: none;
+      }
+    }
+
+  }
+}
+
+//styling for mobile specifically
+@media @mobile{
+  .about-content{
+    width: 98%;
+    margin-left: 1%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  section{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+    .person1, .person2, .person3, .person4, .person5{
+      width: 45%;
+      height: auto;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin: 10px 0;
+      img{
+        display: inline;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+      div{
+        width: 100%;
+        height: auto;
+        h2{
+          text-align: center;
+        }
+      }
+
+    }
+    .person2, .person4{
+      img{
+        //move pictures to the left hand side so everything's even
+        order: -1;
+      }
+    }
+
+  }
+
 }
