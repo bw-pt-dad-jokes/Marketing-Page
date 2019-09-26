@@ -312,9 +312,9 @@ body .topSection .largeBlock {
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  background-color: #bcbac6;
+  background-color: #F8D195;
   margin: 0 auto;
-  border: 2px solid #bcbac6;
+  border: 2px solid #F8D195;
   border-radius: 25px;
 }
 @media (max-width: 880px) {
@@ -387,9 +387,9 @@ body .bottomSection {
 body .bottomSection .smallBlock {
   width: 45%;
   height: 600px;
-  background-color: #bcbac6;
+  background-color: #F8D195;
   text-align: center;
-  border: 2px solid #bcbac6;
+  border: 2px solid #F8D195;
   border-radius: 25px;
 }
 @media (max-width: 880px) {
