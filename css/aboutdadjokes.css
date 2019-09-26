@@ -1,3 +1,8 @@
+/*I just use the following mixin so I can see borders whenever I'm working on things
+as such it's commented out because I'm not really using
+.seenBorder{
+  border: 2px solid lightslategray;
+}*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -172,31 +177,109 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+.seenBorder {
+  border: 2px solid lightslategray;
+}
 header {
-  border: 2px solid orange;
+  border: 2px solid #ff5e13;
   border-radius: 10px;
+  background: #ff5e13;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
-  margin: 0 5%;
+  margin: 10px 5%;
 }
-header .mark-nav {
+header nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin: 0 5%;
+  width: 100%;
+  margin: 10px;
 }
-header .mark-nav h1 {
-  padding: 10px;
+header nav h1 {
   font-family: 'Amatic SC', cursive;
 }
-header .mark-nav a {
-  font-size: 1.8rem;
+header nav .title-anchor {
+  width: 60%;
+  text-align: right;
+  padding-right: 15px;
   text-decoration: none;
-  color: lightslategray;
-  padding: 10 20;
+  color: #030620;
+}
+header nav .a-tags {
+  width: 40%;
+  text-align: center;
+}
+header nav .a-tags a {
+  font-size: 1.8rem;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: white;
+  padding: 22px 5px;
+  border-left: 2px solid white;
+}
+@media (max-width: 880px) {
+  header {
+    border: 2px solid white;
+    border-radius: 0px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    margin: 10px 1%;
+    flex-direction: column;
+  }
+  header .mark-nav {
+    flex-direction: column;
+    margin: 0;
+  }
+  header .mark-nav h1 {
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    border: 2px solid #ff5e13;
+    border-radius: 5px;
+    background: #ff5e13;
+  }
+  header .mark-nav .title-anchor {
+    width: 100%;
+    padding-right: 0;
+  }
+  header .mark-nav .a-tags {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  header .mark-nav .a-tags a {
+    padding: 0;
+    padding: 15px 5px;
+    border: none;
+    border: 2px solid #ff5e13;
+    border-radius: 5px;
+    border-top: 2px solid #f6f6f6;
+    color: white;
+    background: #ff5e13;
+  }
+}
+@media (max-width: 500px) {
+}
+footer {
+  border: 2px solid #ff5e13;
+  border-radius: 10px;
+  background: #ff5e13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 10px 5%;
+}
+footer copyright {
+  padding: 20px 5px;
+  font-size: 1.5rem;
 }
 @font-face {
   font-family: 'Amatic SC';
