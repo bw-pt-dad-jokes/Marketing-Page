@@ -199,9 +199,13 @@ header nav {
 }
 header nav h1 {
   font-family: 'Amatic SC', cursive;
+}
+header nav .title-anchor {
   width: 60%;
   text-align: right;
-  padding-right: 20px;
+  padding-right: 15px;
+  text-decoration: none;
+  color: #030620;
 }
 header nav .a-tags {
   width: 40%;
@@ -240,6 +244,10 @@ header nav .a-tags a {
     border: 2px solid #ff5e13;
     border-radius: 5px;
     background: #ff5e13;
+  }
+  header .mark-nav .title-anchor {
+    width: 100%;
+    padding-right: 0;
   }
   header .mark-nav .a-tags {
     display: flex;
@@ -282,9 +290,9 @@ footer copyright {
   flex-direction: column;
 }
 .about-content section {
-  border: 2px solid #bcbac6;
+  border: 2px solid #F8D195;
   border-radius: 10px;
-  background: #bcbac6;
+  background: #F8D195;
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
@@ -296,6 +304,9 @@ footer copyright {
 .about-content section h2 {
   font-family: 'Big Shoulders Display', cursive;
   text-align: center;
+}
+.about-content section p {
+  padding: 10px;
 }
 .about-content .person1,
 .about-content .person2,
@@ -316,22 +327,13 @@ footer copyright {
 .about-content .person3 div,
 .about-content .person4 div,
 .about-content .person5 div {
-  border: 2px solid #bcbac6;
+  border: 2px solid #F8D195;
   border-radius: 10px;
-  background: #bcbac6;
+  background: #F8D195;
   width: 75%;
   padding: 15px 10px;
   height: 200px;
   margin: 15px;
-}
-.about-content .person1 div:hover,
-.about-content .person2 div:hover,
-.about-content .person3 div:hover,
-.about-content .person4 div:hover,
-.about-content .person5 div:hover {
-  background: #f6f6f6;
-  border: 2px solid #bcbac6;
-  border-radius: 10px;
 }
 .about-content .person1 div h2,
 .about-content .person2 div h2,
@@ -356,6 +358,51 @@ footer copyright {
   width: 200px;
   height: 200px;
 }
+.about-content .person1 .with-icons,
+.about-content .person2 .with-icons,
+.about-content .person3 .with-icons,
+.about-content .person4 .with-icons,
+.about-content .person5 .with-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  height: 75%;
+  width: auto;
+  flex-wrap: wrap;
+}
+.about-content .person1 .with-icons img,
+.about-content .person2 .with-icons img,
+.about-content .person3 .with-icons img,
+.about-content .person4 .with-icons img,
+.about-content .person5 .with-icons img {
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
+  align-self: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+.about-content .person1 .with-icons a,
+.about-content .person2 .with-icons a,
+.about-content .person3 .with-icons a,
+.about-content .person4 .with-icons a,
+.about-content .person5 .with-icons a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #030620;
+  padding: 10px;
+}
+.about-content .person1 .with-icons a:hover,
+.about-content .person2 .with-icons a:hover,
+.about-content .person3 .with-icons a:hover,
+.about-content .person4 .with-icons a:hover,
+.about-content .person5 .with-icons a:hover {
+  background: #FFEDA9;
+  border-radius: 10px;
+}
 .about-content .person1 div,
 .about-content .person3 div,
 .about-content .person5 div {
@@ -366,6 +413,10 @@ footer copyright {
 .about-content .person5 div h2 {
   text-align: left;
 }
+.about-content .person2 .with-icons,
+.about-content .person4 .with-icons {
+  justify-content: flex-end;
+}
 .about-content .person2 div,
 .about-content .person4 div {
   margin-left: 0px;
@@ -375,6 +426,9 @@ footer copyright {
   text-align: right;
 }
 @media (max-width: 880px) {
+  .about-content .right-img {
+    display: none;
+  }
   .about-content .person1 div,
   .about-content .person2 div,
   .about-content .person3 div,
@@ -388,13 +442,20 @@ footer copyright {
   .about-content .person3 div h2,
   .about-content .person4 div h2,
   .about-content .person5 div h2 {
-    text-align: left;
+    text-align: center;
   }
-  .about-content .person1 img,
-  .about-content .person2 img,
-  .about-content .person3 img,
-  .about-content .person4 img,
-  .about-content .person5 img {
+  .about-content .person1 div .with-icons,
+  .about-content .person2 div .with-icons,
+  .about-content .person3 div .with-icons,
+  .about-content .person4 div .with-icons,
+  .about-content .person5 div .with-icons {
+    justify-content: space-around;
+  }
+  .about-content .person1 .left-img,
+  .about-content .person2 .left-img,
+  .about-content .person3 .left-img,
+  .about-content .person4 .left-img,
+  .about-content .person5 .left-img {
     display: none;
   }
 }
@@ -416,20 +477,21 @@ footer copyright {
   .about-content .person4,
   .about-content .person5 {
     width: 45%;
-    height: auto;
+    height: 100%;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 10px 0;
+    align-self: flex-start;
   }
-  .about-content .person1 img,
-  .about-content .person2 img,
-  .about-content .person3 img,
-  .about-content .person4 img,
-  .about-content .person5 img {
+  .about-content .person1 .left-img,
+  .about-content .person2 .left-img,
+  .about-content .person3 .left-img,
+  .about-content .person4 .left-img,
+  .about-content .person5 .left-img {
     display: inline;
     width: 100px;
     height: 100px;
-    margin: 10px;
+    margin: 10px 0;
   }
   .about-content .person1 div,
   .about-content .person2 div,
@@ -445,6 +507,13 @@ footer copyright {
   .about-content .person4 div h2,
   .about-content .person5 div h2 {
     text-align: center;
+  }
+  .about-content .person1 div a,
+  .about-content .person2 div a,
+  .about-content .person3 div a,
+  .about-content .person4 div a,
+  .about-content .person5 div a {
+    padding: 10px;
   }
   .about-content .person2 img,
   .about-content .person4 img {
