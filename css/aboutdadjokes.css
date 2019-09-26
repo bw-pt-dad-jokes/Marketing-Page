@@ -209,6 +209,11 @@ body {
   width: 80%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  body {
+    width: 90%;
+  }
+}
 body .topSection {
   margin: 0 auto;
   margin-top: 30px;
@@ -223,6 +228,11 @@ body .topSection .largeBlock {
   margin: 0 auto;
   border: 2px solid #bcbac6;
   border-radius: 25px;
+}
+@media (max-width: 500px) {
+  body .topSection .largeBlock {
+    width: 100%;
+  }
 }
 body .topSection .largeBlock h2 {
   font-size: 2.75rem;
@@ -245,6 +255,14 @@ body .bottomSection {
   justify-content: space-evenly;
   margin-bottom: 20px;
 }
+@media (max-width: 500px) {
+  body .bottomSection {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 0px;
+  }
+}
 body .bottomSection .smallBlock {
   width: 45%;
   height: 500px;
@@ -252,6 +270,13 @@ body .bottomSection .smallBlock {
   text-align: center;
   border: 2px solid #bcbac6;
   border-radius: 25px;
+}
+@media (max-width: 500px) {
+  body .bottomSection .smallBlock {
+    width: 100%;
+    height: 250px;
+    margin-top: 30px;
+  }
 }
 body .bottomSection .smallBlock h2 {
   font-size: 2.75rem;

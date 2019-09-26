@@ -10,6 +10,9 @@
 body {
     width: 80%;
     margin: @center-margin;
+    @media @mobile{
+        width: 90%;
+    }
     .topSection{
         margin: @center-margin;
         margin-top: 30px;
@@ -23,6 +26,9 @@ body {
             margin: @center-margin;
             border: 2px solid @french-gray;
             border-radius: 25px;
+            @media @mobile{
+                width: 100%;
+            }
             h2{
                 font-size: 2.75rem;
                 margin-top: 20px;
@@ -45,6 +51,12 @@ body {
         flex-direction: row;
         justify-content: space-evenly;
         margin-bottom: 20px;
+        @media @mobile{
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-top: 0px;
+        }
         .smallBlock{
             width: 45%;
             height: 500px;
@@ -52,6 +64,11 @@ body {
             text-align: center;
             border: 2px solid @french-gray;
             border-radius: 25px;
+            @media @mobile{
+                width: 100%;
+                height: 250px;
+                margin-top: 30px;
+            }
             h2{
                 font-size: 2.75rem;
                 margin-top: 20px;
