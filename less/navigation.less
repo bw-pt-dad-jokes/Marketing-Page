@@ -10,9 +10,16 @@ header {
     .displayFlex(space-between; center; 100%; 10px;);
     h1 {
       font-family: 'Amatic SC', cursive;
+      // width: 60%;
+      // text-align: right;
+      // padding-right: 20px;
+    }
+    .title-anchor{
       width: 60%;
       text-align: right;
-      padding-right: 20px;
+      padding-right: 15px;
+      text-decoration: none;
+      color: @black-pearl;
     }
     .a-tags {
       width: 40%;
@@ -31,6 +38,7 @@ header {
 //though I did everything desktop first, the code does read as mobile first but
 //only because that's what the mvp requires of us.
 //nav styling for tablet
+//navigation styling for mobile
 @media @tablet {
  header {
     border: 2px solid white;
@@ -50,7 +58,11 @@ header {
         .border(2px solid @orange; 5px;);
         background: @orange;
       }
-      .a-tags{
+      .title-anchor{
+        width: 100%;
+        padding-right: 0;
+      }
+        .a-tags{
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -72,3 +84,4 @@ header {
 @media @mobile {
 //everything for the @tablet size above still fits
 }
+//end nav styles for mobile
