@@ -1,0 +1,178 @@
+//styling for the body of the about Page
+
+.about-content{
+  .displayFlex(center; center; 90%; 10px 5%;);
+  //.seenBorder;
+  flex-direction: column;
+  section{
+    .border(2px solid @light-orange; 10px;);
+    background: @light-orange;
+    margin-bottom: 15px;
+    .displayFlex(center; left; 100%; 10px 0;);
+    flex-direction: column;
+    h2{
+      font-family: 'Big Shoulders Display', cursive;
+      text-align: center;
+    }
+    p{
+      padding: 10px;
+    }
+  }
+  //taking away the border around all sections to just put it on the divs here
+  .person1, .person2, .person3, .person4, .person5{
+    flex-direction: row;
+    background: none;
+    border: none;
+    .displayFlex(space-between; center; 100%; 10px 0;);
+    div{
+      .border(2px solid @light-orange; 10px;);
+      background: @light-orange;
+      width: 75%;
+      padding: 15px 10px;
+      height: 200px;
+      margin: 15px;
+      // &:hover{
+      //   background: @wild-sand;
+      //   .border(2px solid @french-gray; 10px);
+      // }
+      h2{
+        //font-size: 1.9rem;
+        color: @black-pearl;
+      }
+      p{
+      //  font-size: 1.3rem;
+      color: @black-pearl;
+      }
+    }
+    img{
+      border-radius: 10px;
+      width: 200px;
+      height: 200px;
+    }
+    .with-icons{
+      //go back and fix it for p2 and 4 so the icons are near their faces instead of the other way around
+      .displayFlex(flex-start; center; auto; 0;);
+      height: 75%;
+      width: auto;
+      flex-wrap: wrap;
+      img{
+        width: 50px;
+        height: 50px;
+        padding-right: 10px;
+        align-self: center;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      a{
+        display: flex;
+        flex-direction: column;
+      //  text-align: center;
+        text-decoration: none;
+        font-size: 1.7rem;
+        color:@black-pearl;
+        padding: 10px;
+        &:hover{
+          background: #FFEDA9;
+          border-radius: 10px;
+          }
+      }
+    }
+  }
+  .person1, .person3, .person5{
+    div{
+      margin-right: 0px;
+      h2{
+        text-align: left;
+      }
+    }
+  }
+  .person2, .person4{
+    .with-icons{
+      justify-content: flex-end;
+    }
+    div{
+      margin-left:0px;
+      h2{
+        text-align: right;
+
+      }
+    }
+  }
+}
+
+//styling for tablet mode
+@media @tablet{
+  .about-content{
+    .right-img{
+      display: none;
+    }
+    .person1, .person2, .person3, .person4, .person5{
+
+      div{
+        width: 100%;
+        margin: 0;
+        h2{
+          text-align: center;
+        }
+        .with-icons{
+          justify-content: space-around;
+        }
+      }
+      .left-img{
+      display: none;
+      }
+    }
+
+  }
+
+}
+
+//styling for mobile specifically
+@media @mobile{
+  .about-content{
+    width: 98%;
+    margin-left: 1%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  section{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+    .person1, .person2, .person3, .person4, .person5{
+      width: 45%;
+      height: 100%;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin: 10px 0;
+      //.seenBorder;
+      align-self: flex-start;
+      .left-img{
+        display: inline;
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+      }
+      div{
+        width: 100%;
+        height: auto;
+        h2{
+          text-align: center;
+        }
+        a{
+          padding: 10px;
+        }
+      }
+
+    }
+    .person2, .person4{
+      img{
+        //move pictures to the left hand side so everything's even
+        order: -1;
+      }
+    }
+
+  }
+
+}

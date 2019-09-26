@@ -1,0 +1,17 @@
+.displayFlex(@justify, @align, @width , @margin){
+  display:flex;
+  justify-content: @justify;
+  align-items: @align;
+  width: @width;
+  margin: @margin;
+}
+//this is the border used for the header and footer
+.border(@border, @border-rad){
+  border: @border;
+  border-radius: @border-rad;
+}
+/*I just use the following mixin so I can see borders whenever I'm working on things
+as such it's commented out because I'm not really using
+.seenBorder{
+  border: 2px solid lightslategray;
+}*/
