@@ -228,7 +228,7 @@ body {
 body .main-section .homepage-block {
   width: 90%;
   margin: 0 auto;
-  background-color: #bcbac6;
+  background-color: orange;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
