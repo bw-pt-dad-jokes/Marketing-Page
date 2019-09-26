@@ -1,0 +1,540 @@
+/*I just use the following mixin so I can see borders whenever I'm working on things
+as such it's commented out because I'm not really using
+.seenBorder{
+  border: 2px solid lightslategray;
+}*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* This is added in here specifically for responsive font sizes */
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Indie Flower', cursive;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.seenBorder {
+  border: 2px solid lightslategray;
+}
+header {
+  border: 2px solid #ff5e13;
+  border-radius: 10px;
+  background: #ff5e13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 10px 5%;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
+}
+header nav h1 {
+  font-family: 'Amatic SC', cursive;
+}
+header nav .title-anchor {
+  width: 60%;
+  text-align: right;
+  padding-right: 15px;
+  text-decoration: none;
+  color: #030620;
+}
+header nav .a-tags {
+  width: 40%;
+  text-align: center;
+}
+header nav .a-tags a {
+  font-size: 1.8rem;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: white;
+  padding: 22px 5px;
+  border-left: 2px solid white;
+}
+@media (max-width: 880px) {
+  header {
+    border: 2px solid white;
+    border-radius: 0px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    margin: 10px 1%;
+    flex-direction: column;
+  }
+  header .mark-nav {
+    flex-direction: column;
+    margin: 0;
+  }
+  header .mark-nav h1 {
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    border: 2px solid #ff5e13;
+    border-radius: 5px;
+    background: #ff5e13;
+  }
+  header .mark-nav .title-anchor {
+    width: 100%;
+    padding-right: 0;
+  }
+  header .mark-nav .a-tags {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  header .mark-nav .a-tags a {
+    padding: 0;
+    padding: 15px 5px;
+    border: none;
+    border: 2px solid #ff5e13;
+    border-radius: 5px;
+    border-top: 2px solid #f6f6f6;
+    color: white;
+    background: #ff5e13;
+  }
+}
+@media (max-width: 500px) {
+}
+footer {
+  border: 2px solid #ff5e13;
+  border-radius: 10px;
+  background: #ff5e13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 10px 5%;
+}
+footer copyright {
+  padding: 20px 5px;
+  font-size: 1.5rem;
+}
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 10px 5%;
+  flex-direction: column;
+}
+.about-content section {
+  border: 2px solid #F8D195;
+  border-radius: 10px;
+  background: #F8D195;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  width: 100%;
+  margin: 10px 0;
+  flex-direction: column;
+}
+.about-content section h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  text-align: center;
+}
+.about-content section p {
+  padding: 10px;
+}
+.about-content .person1,
+.about-content .person2,
+.about-content .person3,
+.about-content .person4,
+.about-content .person5 {
+  flex-direction: row;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+.about-content .person1 div,
+.about-content .person2 div,
+.about-content .person3 div,
+.about-content .person4 div,
+.about-content .person5 div {
+  border: 2px solid #F8D195;
+  border-radius: 10px;
+  background: #F8D195;
+  width: 75%;
+  padding: 15px 10px;
+  height: 200px;
+  margin: 15px;
+}
+.about-content .person1 div h2,
+.about-content .person2 div h2,
+.about-content .person3 div h2,
+.about-content .person4 div h2,
+.about-content .person5 div h2 {
+  color: #030620;
+}
+.about-content .person1 div p,
+.about-content .person2 div p,
+.about-content .person3 div p,
+.about-content .person4 div p,
+.about-content .person5 div p {
+  color: #030620;
+}
+.about-content .person1 img,
+.about-content .person2 img,
+.about-content .person3 img,
+.about-content .person4 img,
+.about-content .person5 img {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+.about-content .person1 .with-icons,
+.about-content .person2 .with-icons,
+.about-content .person3 .with-icons,
+.about-content .person4 .with-icons,
+.about-content .person5 .with-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  height: 75%;
+  width: auto;
+  flex-wrap: wrap;
+}
+.about-content .person1 .with-icons img,
+.about-content .person2 .with-icons img,
+.about-content .person3 .with-icons img,
+.about-content .person4 .with-icons img,
+.about-content .person5 .with-icons img {
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
+  align-self: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+.about-content .person1 .with-icons a,
+.about-content .person2 .with-icons a,
+.about-content .person3 .with-icons a,
+.about-content .person4 .with-icons a,
+.about-content .person5 .with-icons a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #030620;
+  padding: 10px;
+}
+.about-content .person1 .with-icons a:hover,
+.about-content .person2 .with-icons a:hover,
+.about-content .person3 .with-icons a:hover,
+.about-content .person4 .with-icons a:hover,
+.about-content .person5 .with-icons a:hover {
+  background: #FFEDA9;
+  border-radius: 10px;
+}
+.about-content .person1 div,
+.about-content .person3 div,
+.about-content .person5 div {
+  margin-right: 0px;
+}
+.about-content .person1 div h2,
+.about-content .person3 div h2,
+.about-content .person5 div h2 {
+  text-align: left;
+}
+.about-content .person2 .with-icons,
+.about-content .person4 .with-icons {
+  justify-content: flex-end;
+}
+.about-content .person2 div,
+.about-content .person4 div {
+  margin-left: 0px;
+}
+.about-content .person2 div h2,
+.about-content .person4 div h2 {
+  text-align: right;
+}
+@media (max-width: 880px) {
+  .about-content .right-img {
+    display: none;
+  }
+  .about-content .person1 div,
+  .about-content .person2 div,
+  .about-content .person3 div,
+  .about-content .person4 div,
+  .about-content .person5 div {
+    width: 100%;
+    margin: 0;
+  }
+  .about-content .person1 div h2,
+  .about-content .person2 div h2,
+  .about-content .person3 div h2,
+  .about-content .person4 div h2,
+  .about-content .person5 div h2 {
+    text-align: center;
+  }
+  .about-content .person1 div .with-icons,
+  .about-content .person2 div .with-icons,
+  .about-content .person3 div .with-icons,
+  .about-content .person4 div .with-icons,
+  .about-content .person5 div .with-icons {
+    justify-content: space-around;
+  }
+  .about-content .person1 .left-img,
+  .about-content .person2 .left-img,
+  .about-content .person3 .left-img,
+  .about-content .person4 .left-img,
+  .about-content .person5 .left-img {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .about-content {
+    width: 98%;
+    margin-left: 1%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about-content section {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .about-content .person1,
+  .about-content .person2,
+  .about-content .person3,
+  .about-content .person4,
+  .about-content .person5 {
+    width: 45%;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px 0;
+    align-self: flex-start;
+  }
+  .about-content .person1 .left-img,
+  .about-content .person2 .left-img,
+  .about-content .person3 .left-img,
+  .about-content .person4 .left-img,
+  .about-content .person5 .left-img {
+    display: inline;
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+  }
+  .about-content .person1 div,
+  .about-content .person2 div,
+  .about-content .person3 div,
+  .about-content .person4 div,
+  .about-content .person5 div {
+    width: 100%;
+    height: auto;
+  }
+  .about-content .person1 div h2,
+  .about-content .person2 div h2,
+  .about-content .person3 div h2,
+  .about-content .person4 div h2,
+  .about-content .person5 div h2 {
+    text-align: center;
+  }
+  .about-content .person1 div a,
+  .about-content .person2 div a,
+  .about-content .person3 div a,
+  .about-content .person4 div a,
+  .about-content .person5 div a {
+    padding: 10px;
+  }
+  .about-content .person2 img,
+  .about-content .person4 img {
+    order: -1;
+  }
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(https://fonts.gstatic.com/s/amaticsc/v13/TUZyzwprpvBS1izr_vOECuSa.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Big Shoulders Display Regular'), local('BigShouldersDisplay-Regular'), url(https://fonts.gstatic.com/s/bigshouldersdisplay/v1/fC1_PZJEZG-e9gHhdI4-NBbfd2ys3SjJCx1czNDr.ttf) format('truetype');
+}
